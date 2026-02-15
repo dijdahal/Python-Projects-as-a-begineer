@@ -11,6 +11,10 @@ def withdraw(name, amount):
         print(f"Hi {name}! Your balance is ${accounts[name]} after Withdraw")
 
 
+def show_balance(name, amount):
+    print(f"Dear{name} you have ${amount} in your account.")
+
+
 accounts = {
     "dij": 5000,
     "chiran": 200,
@@ -24,19 +28,23 @@ while True:
         print("Closing the shop. GooDidbye!")
         break
     if name in accounts:
-        print("1. Deposit")
-        print("2. Withdraw")
-        print("3. Logout")
-        choice = input("Enter the choice(1-3):")
-        if choice == "1":
+        while True:
+            print("1. Deposit")
+            print("2. Withdraw")
+            print("3. Logout")
+            choice = input("Enter the choice(1-3):")
+            if choice == "1":
 
-            amount = int(input("Enter the amount for deposit:"))
-            print("Enter the valid number")
-            deposit(name, amount)
+                amount = int(input("Enter the amount for deposit:"))
+                deposit(name, amount)
 
-        elif choice == "2":
-            amount = int(input("Enter the amount for Withdraw: "))
-            withdraw(name, amount)
+            elif choice == "2":
+                amount = int(input("Enter the amount for Withdraw: "))
+                withdraw(name, amount)
+            elif choice == "3":
+
+                print("LOGGING OUT")
+                break
 
     else:
         print("Account donot exists!")
