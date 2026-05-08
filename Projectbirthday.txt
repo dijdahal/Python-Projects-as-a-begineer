@@ -1,0 +1,2 @@
+Skill: Communication | Progress: 99% | Visual: [######### ]
+Skill: Sales | Progress: 10% | Visual: [#         ]
